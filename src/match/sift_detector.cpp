@@ -283,6 +283,7 @@ void SiftDetector::detect_and_compute(const cv::Mat &img, std::vector<cv::KeyPoi
     grid_col = std::ceil((float)cols / cell_size);
 
     const float RAD2DEG = 180.0f / 3.141592653589f;
+	//nfeat_ = 20000;
     int nfeat_per_grid = (1.5 * nfeat_) / (grid_row * grid_col);
     for (int i = 0; i < grid_row * grid_col; ++i) {
         int celly = i / grid_col;

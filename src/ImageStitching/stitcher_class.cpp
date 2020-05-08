@@ -1,9 +1,14 @@
 #include <stdio.h>  
-#include "opencv2/opencv.hpp" 
-#include "opencv2/stitching/stitcher.hpp"
 #include <stdio.h>
 #include <iostream> 
 #include <unistd.h>
+#include <opencv2/core/eigen.hpp>
+#include <opencv2/features2d.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/calib3d.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
 
 #ifdef _DEBUG  
 #pragma comment(lib, "opencv_core246d.lib")   
@@ -15,7 +20,7 @@
 #pragma comment(lib, "opencv_core246.lib")  
 #pragma comment(lib, "opencv_imgproc246.lib")  
 #pragma comment(lib, "opencv_highgui246.lib")  
-#pragma comment(lib, "opencv_stitching246.lib");
+#pragma comment(lib, "opencv_stitching246.lib")
 #endif  
 
 using namespace cv;  
