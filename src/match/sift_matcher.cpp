@@ -224,6 +224,7 @@ std::vector<cv::DMatch> SiftMatcher::match(const std::vector<cv::KeyPoint> &qkey
 	auto siftmatches = matches;
 	auto siftNums= retain_best_matches(qkeys, siftmatches);
 	std::cout << "SIFT nums:" << siftmatches.size() << std::endl;
+	param_.model = 1;
     if (param_.model == 0) {
         matches = acransac::acransac_homography(matches, keys_, qkeys, param_.sac_threshold);
     } else if (param_.model == 1) {
